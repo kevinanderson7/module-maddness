@@ -1,7 +1,6 @@
-let formatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-});
-formatter.format(2500);
+const formatter = (newRandomNumber) => {
+  const formatNumber = new Intl.NumberFormat().format(newRandomNumber);
+  return '$' + formatNumber;
+};
 
 module.exports = formatter;

@@ -1,9 +1,11 @@
 const randomNumber = require('./random-number.js');
 const dollarConverter = require('./dollar-converter.js');
 
-let currency = () => {
-  let randomDollarAmount = dollarConverter.format(randomNumber(10, 10000));
-  return 'Random dollar amount: ' + randomDollarAmount;
+const currency = () => {
+  const random = randomNumber(10, 10000);
+  const money = dollarConverter(random);
+
+  return money;
 };
 
 module.exports = currency;
